@@ -31,25 +31,15 @@ Route::get('/oauth2/authorize', function (Request $request) {
     return view('welcome');
 });
 
-Route::get('/dashboard', [PlansController::class, 'index'])->middleware(['auth', 'verified'])->name('dashboard');
-// Route::get('/oauth2/authorize', [ProfileController::class, 'verify']);
 
 Route::get('/payment', 'StripeController@stripe')->name('payment.form');
-// Route::post('/process-payment', 'StripeController@processPayment')->name('process.payment');
-Route::post('/process-payment', [StripeController::class, 'processPayment'])->name('process.payment')->middleware(['auth', 'verified']);
-
-Route::get('/payment/success', function () {
-    return view('payment-success');
-})->name('payment.success');
-
-Route::get('/payment/failure', function () {
-    return view('payment-failure');
-})->name('payment.failure');
 
 Route::post('/stripe/webhook', [StripeWebhookController::class, 'handleInvoicePaymentSucceeded']);
 // Route::post('/webhook/stripe', 'StripeWebhookController@handleWebhook')->name('stripe.webhook')->withoutMiddleware([\App\Http\Middleware\VerifyCsrfToken::class]);
 
 Route::middleware('auth')->group(function () {
+    Route::get('/dashboard', [PlansController::class, 'index'])->name('dashboard');
+    Route::post('/process-payment', [StripeController::class, 'processPayment'])->name('process.payment');
     Route::get('stripe', [StripeController::class, 'stripe']);
     Route::post('stripe', [StripeController::class, 'stripePost'])->name('stripe.post');
     Route::get('/settings', [UserApiKeyController::class, 'edit'])->name('settings.edit');
