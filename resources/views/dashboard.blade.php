@@ -15,7 +15,7 @@
                     <div>
                         <h3>Welcome to Your Premium Content!</h3>
                         <p>You have successfully subscribed to our premium monthly plan. start using our services</p>
-                        <a href="/google/login" class="btn btn-primary">Connect to Google Analytics</a>
+                        <!-- <a href="/google/login" class="btn btn-primary">Connect to Google Analytics</a> -->
                     </div>
                     @else
                     <!-- Message for users without an active plan -->
@@ -53,8 +53,9 @@
 <script src="https://js.stripe.com/v3/"></script>
 
 <script>
+    var stripeKey = "{{ config('services.stripe.key') }}";
     // Create a Stripe client.
-    var stripe = Stripe('pk_test_51KC9HaFnsuKK3c1Rms5ASrStTlsVMiuf4TKTHTbp5jyMb3THAIy6VuZoiVjgu5NODATqqCNtliDqTKkDITPEUIhb00lRfS4gTn');
+    var stripe = Stripe(stripeKey);
     // Create an instance of Elements.
     var elements = stripe.elements();
     // Create an instance of the card Element.
