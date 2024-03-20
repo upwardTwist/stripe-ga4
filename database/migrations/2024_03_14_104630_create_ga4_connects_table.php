@@ -13,13 +13,13 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('purchases', function (Blueprint $table) {
+        Schema::create('ga4_connects', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id')->constrained()->onDelete('cascade');
-            $table->string('stripe_charge_id')->unique();
-            $table->decimal('amount', 8, 2);
-            $table->enum('status', ['pending', 'completed', 'failed'])->default('pending');
-            $table->date('expiry_date');
+            $table->text('access_token')->nullable();
+            $table->text('refresh_token')->nullable();
+            $table->text('scope')->nullable();
+            $table->integer('expires_in')->nullable();
             $table->timestamps();
         });
     }
@@ -31,6 +31,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('purchases');
+        Schema::dropIfExists('ga4_connects');
     }
 };

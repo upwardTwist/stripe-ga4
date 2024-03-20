@@ -4,19 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    "content-hash": "cac6057d442531cea0c163460d123a19",
-=======
     "content-hash": "59b90fbfe4b797e5b486061b58812463",
->>>>>>> 85de68a96afcfa20f6af182097a1caa2ba53d092
-=======
-    "content-hash": "59b90fbfe4b797e5b486061b58812463",
->>>>>>> 85de68a96afcfa20f6af182097a1caa2ba53d092
-=======
-    "content-hash": "59b90fbfe4b797e5b486061b58812463",
->>>>>>> 85de68a96afcfa20f6af182097a1caa2ba53d092
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -633,14 +621,6 @@
             "time": "2023-10-06T06:47:41+00:00"
         },
         {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 85de68a96afcfa20f6af182097a1caa2ba53d092
-=======
->>>>>>> 85de68a96afcfa20f6af182097a1caa2ba53d092
             "name": "firebase/php-jwt",
             "version": "v6.10.0",
             "source": {
@@ -704,13 +684,6 @@
             "time": "2023-12-01T16:26:39+00:00"
         },
         {
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 85de68a96afcfa20f6af182097a1caa2ba53d092
-=======
->>>>>>> 85de68a96afcfa20f6af182097a1caa2ba53d092
-=======
->>>>>>> 85de68a96afcfa20f6af182097a1caa2ba53d092
             "name": "fruitcake/laravel-cors",
             "version": "v2.2.0",
             "source": {
@@ -862,14 +835,6 @@
             "time": "2023-10-12T05:21:21+00:00"
         },
         {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 85de68a96afcfa20f6af182097a1caa2ba53d092
-=======
->>>>>>> 85de68a96afcfa20f6af182097a1caa2ba53d092
             "name": "google/apiclient",
             "version": "v2.15.3",
             "source": {
@@ -1041,13 +1006,6 @@
             "time": "2024-02-21T17:03:52+00:00"
         },
         {
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 85de68a96afcfa20f6af182097a1caa2ba53d092
-=======
->>>>>>> 85de68a96afcfa20f6af182097a1caa2ba53d092
-=======
->>>>>>> 85de68a96afcfa20f6af182097a1caa2ba53d092
             "name": "graham-campbell/result-type",
             "version": "v1.1.2",
             "source": {
@@ -2980,14 +2938,6 @@
             "time": "2023-02-08T01:06:31+00:00"
         },
         {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 85de68a96afcfa20f6af182097a1caa2ba53d092
-=======
->>>>>>> 85de68a96afcfa20f6af182097a1caa2ba53d092
             "name": "paragonie/constant_time_encoding",
             "version": "v2.6.3",
             "source": {
@@ -3105,13 +3055,6 @@
             "time": "2020-10-15T08:29:30+00:00"
         },
         {
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 85de68a96afcfa20f6af182097a1caa2ba53d092
-=======
->>>>>>> 85de68a96afcfa20f6af182097a1caa2ba53d092
-=======
->>>>>>> 85de68a96afcfa20f6af182097a1caa2ba53d092
             "name": "phpoption/phpoption",
             "version": "1.9.2",
             "source": {
@@ -3187,14 +3130,6 @@
             "time": "2023-11-12T21:59:55+00:00"
         },
         {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 85de68a96afcfa20f6af182097a1caa2ba53d092
-=======
->>>>>>> 85de68a96afcfa20f6af182097a1caa2ba53d092
             "name": "phpseclib/phpseclib",
             "version": "3.0.37",
             "source": {
@@ -3354,13 +3289,6 @@
             "time": "2021-02-03T23:26:27+00:00"
         },
         {
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 85de68a96afcfa20f6af182097a1caa2ba53d092
-=======
->>>>>>> 85de68a96afcfa20f6af182097a1caa2ba53d092
-=======
->>>>>>> 85de68a96afcfa20f6af182097a1caa2ba53d092
             "name": "psr/clock",
             "version": "1.0.0",
             "source": {

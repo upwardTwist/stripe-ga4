@@ -8,19 +8,21 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white dark:bg-white-800 overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-black-900 dark:text-black-100">
-                    {{ __("You're logged in!") }}
+                    Hello {{ auth()->user()->name }}
 
                     @if(auth()->user()->hasActivePlan())
                     <!-- Content for users with an active plan -->
                     <div>
                         <h3>Welcome to Your Premium Content!</h3>
-                        <p>This is the content available for users with an active plan.</p>
+                        <p>You have successfully subscribed to our premium monthly plan. start using our services</p>
+                        <a href="/google/login" class="btn btn-primary">Connect to Google Analytics</a>
                     </div>
                     @else
                     <!-- Message for users without an active plan -->
                     <div>
                         <div class="container">
                             <h2>Subscribe to a Plan</h2>
+                            <p>With just $50/month. you can use our services</p>
                             <!-- Display any success or error messages -->
                             @if(session('success'))
                             <div class="alert alert-success">

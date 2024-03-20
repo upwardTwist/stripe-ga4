@@ -18,20 +18,16 @@ class UserApiKeyController extends Controller
 
     public function update(Request $request)
     {
-
-        $keys =    UserApiKey::where('user_id', Auth::user()->id)->first();
-        // $stripe = new \Stripe\StripeClient($keys->stripe_secret);
+        $user = Auth::user();
+        UserApiKey::where('user_id', $user->id)->first();
         $request->validate([
-            'stripe_key' => 'required|string',
-            'stripe_secret' => 'required|string',
+            'stripe_key' => 'nullable|string',
+            'stripe_secret' => 'nullable|string',
             'ga4_measurement_id' => 'required|string',
             'ga4_api_secret' => 'required|string',
-            'stripe_webhook_secret' => 'required|string',
-            'ga4_measurement_protocol' => 'required|string',
+            'stripe_webhook_secret' => 'nullable|string',
+            'ga4_measurement_protocol' => 'nullable|string',
         ]);
-
-        $user = Auth::user();
-
         UserApiKey::updateOrCreate(
             ['user_id' => $user->id],
             [

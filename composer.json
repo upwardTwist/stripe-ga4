@@ -8,18 +8,7 @@
         "php": "^8.0",
         "daikazu/laravel-ga4-event-tracking": "dev-main",
         "fruitcake/laravel-cors": "^2.0.5",
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
         "google/apiclient": "^2.0",
->>>>>>> 85de68a96afcfa20f6af182097a1caa2ba53d092
-=======
-        "google/apiclient": "^2.0",
->>>>>>> 85de68a96afcfa20f6af182097a1caa2ba53d092
-=======
-        "google/apiclient": "^2.0",
->>>>>>> 85de68a96afcfa20f6af182097a1caa2ba53d092
         "guzzlehttp/guzzle": "^7.2",
         "laravel/cashier": "^14.14",
         "laravel/framework": "^9.0",

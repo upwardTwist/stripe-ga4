@@ -21,6 +21,7 @@ class ProfileController extends Controller
         return view('profile.edit', [
             'user' => $request->user(),
             'keys' => $keys,
+            'callback_url' => url('/') . '/stripe/webhook?uuid=' . Auth::user()->id,
         ]);
     }
 
