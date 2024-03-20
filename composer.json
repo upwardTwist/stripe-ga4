@@ -10,6 +10,10 @@
         "fruitcake/laravel-cors": "^2.0.5",
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+        "google/apiclient": "^2.0",
+>>>>>>> 85de68a96afcfa20f6af182097a1caa2ba53d092
 =======
         "google/apiclient": "^2.0",
 >>>>>>> 85de68a96afcfa20f6af182097a1caa2ba53d092

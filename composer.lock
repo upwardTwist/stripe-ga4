@@ -6,7 +6,11 @@
     ],
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     "content-hash": "cac6057d442531cea0c163460d123a19",
+=======
+    "content-hash": "59b90fbfe4b797e5b486061b58812463",
+>>>>>>> 85de68a96afcfa20f6af182097a1caa2ba53d092
 =======
     "content-hash": "59b90fbfe4b797e5b486061b58812463",
 >>>>>>> 85de68a96afcfa20f6af182097a1caa2ba53d092
@@ -631,7 +635,10 @@
         {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 85de68a96afcfa20f6af182097a1caa2ba53d092
 =======
 >>>>>>> 85de68a96afcfa20f6af182097a1caa2ba53d092
             "name": "firebase/php-jwt",
@@ -698,6 +705,9 @@
         },
         {
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 85de68a96afcfa20f6af182097a1caa2ba53d092
+=======
 >>>>>>> 85de68a96afcfa20f6af182097a1caa2ba53d092
 =======
 >>>>>>> 85de68a96afcfa20f6af182097a1caa2ba53d092
@@ -854,7 +864,10 @@
         {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 85de68a96afcfa20f6af182097a1caa2ba53d092
 =======
 >>>>>>> 85de68a96afcfa20f6af182097a1caa2ba53d092
             "name": "google/apiclient",
@@ -1029,6 +1042,9 @@
         },
         {
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 85de68a96afcfa20f6af182097a1caa2ba53d092
+=======
 >>>>>>> 85de68a96afcfa20f6af182097a1caa2ba53d092
 =======
 >>>>>>> 85de68a96afcfa20f6af182097a1caa2ba53d092
@@ -2966,7 +2982,10 @@
         {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 85de68a96afcfa20f6af182097a1caa2ba53d092
 =======
 >>>>>>> 85de68a96afcfa20f6af182097a1caa2ba53d092
             "name": "paragonie/constant_time_encoding",
@@ -3087,6 +3106,9 @@
         },
         {
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 85de68a96afcfa20f6af182097a1caa2ba53d092
+=======
 >>>>>>> 85de68a96afcfa20f6af182097a1caa2ba53d092
 =======
 >>>>>>> 85de68a96afcfa20f6af182097a1caa2ba53d092
@@ -3167,7 +3189,10 @@
         {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 85de68a96afcfa20f6af182097a1caa2ba53d092
 =======
 >>>>>>> 85de68a96afcfa20f6af182097a1caa2ba53d092
             "name": "phpseclib/phpseclib",
@@ -3330,6 +3355,9 @@
         },
         {
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 85de68a96afcfa20f6af182097a1caa2ba53d092
+=======
 >>>>>>> 85de68a96afcfa20f6af182097a1caa2ba53d092
 =======
 >>>>>>> 85de68a96afcfa20f6af182097a1caa2ba53d092
