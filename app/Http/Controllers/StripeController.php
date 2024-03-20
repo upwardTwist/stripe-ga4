@@ -48,7 +48,7 @@ class StripeController extends Controller
         } catch (\Exception $e) {
             DB::rollBack();
             session()->flash('error', $e->getMessage());
-            return redirect()->route('payment.failure');
+            return redirect()->back();
         }
     }
 }
