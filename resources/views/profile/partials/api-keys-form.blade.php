@@ -22,18 +22,6 @@
         <p class="mt-1 text-lg text-white-600 dark:text-gray-400">
             {{ __("You need to provide this additional information in order to connect your Stripe with your GA4") }}
         </p>
-        <!-- <div>
-            <x-input-label for="Stripe key" :value="__('Stripe key')" />
-            <x-text-input id="Stripe key" name="stripe_key" type="text" class="mt-1 block w-full" :value="old('name', $keys->stripe_key)" required autofocus autocomplete="name" />
-            <x-input-error class="mt-2" :messages="$errors->get('stripe_key')" />
-        </div>
-
-        <div>
-            <x-input-label for="Stripe Secret" :value="__('Stripe Secret')" />
-            <x-text-input id="Stripe Secret" name="stripe_secret" type="text" class="mt-1 block w-full" :value="old('name', $keys->stripe_secret)" required autofocus autocomplete="name" />
-            <x-input-error class="mt-2" :messages="$errors->get('stripe_secret')" />
-        </div> -->
-
         <div>
             <x-input-label for="Stripe Webhook Secret" :value="__('Stripe Webhook Secret')" />
             <x-text-input id="Stripe Webhook Secret" name="stripe_webhook_secret" type="text" class="mt-1 block w-full" :value="old('name', $keys->stripe_webhook_secret)" required autofocus autocomplete="name" />
