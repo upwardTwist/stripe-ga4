@@ -24,22 +24,22 @@
         </p>
         <div>
             <x-input-label for="Stripe Webhook Secret" :value="__('Stripe Webhook Secret')" />
-            <x-text-input id="Stripe Webhook Secret" name="stripe_webhook_secret" type="text" class="mt-1 block w-full" :value="old('name', $keys->stripe_webhook_secret)" required autofocus autocomplete="name" />
+            <x-text-input id="Stripe Webhook Secret" name="stripe_webhook_secret" type="text" class="mt-1 block w-full" :value="old('name', $keys->stripe_webhook_secret ?? '')" required autofocus autocomplete="name" />
             <x-input-error class="mt-2" :messages="$errors->get('stripe_webhook_secret')" />
         </div>
         <div>
             <x-input-label for="GA4 measurement ID" :value="__('GA4 measurement ID')" />
-            <x-text-input id="GA4 measurement ID" name="ga4_measurement_id" type="text" class="mt-1 block w-full" :value="old('name', $keys->ga4_measurement_id)" required autofocus autocomplete="name" />
+            <x-text-input id="GA4 measurement ID" name="ga4_measurement_id" type="text" class="mt-1 block w-full" :value="old('name', $keys->ga4_measurement_id ?? '')" required autofocus autocomplete="name" />
             <x-input-error class="mt-2" :messages="$errors->get('ga4_measurement_id')" />
         </div>
         <div>
             <x-input-label for="GA4 API Secret" :value="__('GA4 API Secret')" />
-            <x-text-input id="GA4 API Secret" name="ga4_api_secret" type="text" class="mt-1 block w-full" :value="old('name', $keys->ga4_api_secret)" required autofocus autocomplete="name" />
+            <x-text-input id="GA4 API Secret" name="ga4_api_secret" type="text" class="mt-1 block w-full" :value="old('name', $keys->ga4_api_secret ?? '')" required autofocus autocomplete="name" />
             <x-input-error class="mt-2" :messages="$errors->get('ga4_api_secret')" />
         </div>
         <div>
             <x-input-label for="GA4 Measurement Protocol Api Secret" :value="__('GA4 Measurement Protocol Api Secret')" />
-            <x-text-input id="GA4 Measurement Protocol Api Secret" name="ga4_measurement_protocol" type="text" class="mt-1 block w-full" :value="old('name', $keys->ga4_measurement_protocol)" required autofocus autocomplete="name" />
+            <x-text-input id="GA4 Measurement Protocol Api Secret" name="ga4_measurement_protocol" type="text" class="mt-1 block w-full" :value="old('name', $keys->ga4_measurement_protocol ?? '')" required autofocus autocomplete="name" />
             <x-input-error class="mt-2" :messages="$errors->get('ga4_measurement_protocol')" />
         </div>
 
