@@ -37,11 +37,11 @@
             <x-text-input id="GA4 API Secret" name="ga4_api_secret" type="text" class="mt-1 block w-full" :value="old('name', $keys->ga4_api_secret ?? '')" required autofocus autocomplete="name" />
             <x-input-error class="mt-2" :messages="$errors->get('ga4_api_secret')" />
         </div>
-        <div>
+        <!-- <div>
             <x-input-label for="GA4 Measurement Protocol Api Secret" :value="__('GA4 Measurement Protocol Api Secret')" />
             <x-text-input id="GA4 Measurement Protocol Api Secret" name="ga4_measurement_protocol" type="text" class="mt-1 block w-full" :value="old('name', $keys->ga4_measurement_protocol ?? '')" required autofocus autocomplete="name" />
             <x-input-error class="mt-2" :messages="$errors->get('ga4_measurement_protocol')" />
-        </div>
+        </div> -->
 
         <div class="flex items-center gap-4">
             <x-primary-button>{{ __('Save') }}</x-primary-button>
