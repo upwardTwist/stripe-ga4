@@ -24,7 +24,7 @@
         </p>
         <div>
             <x-input-label for="Stripe Webhook Secret" :value="__('Stripe Webhook Secret')" />
-            <x-text-input id="Stripe Webhook Secret" name="stripe_webhook_secret" type="text" class="mt-1 block w-full" :value="old('name', $keys->stripe_webhook_secret ?? '')" required autofocus autocomplete="name" />
+            <x-text-input id="Stripe Webhook Secret" name="stripe_webhook_secret" type="text" class="mt-1 block w-full" :value="old('name', $keys->stripe_webhook_secret ?? '')"  autofocus autocomplete="name" />
             <x-input-error class="mt-2" :messages="$errors->get('stripe_webhook_secret')" />
         </div>
         <div>
