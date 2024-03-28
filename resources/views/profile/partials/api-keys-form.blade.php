@@ -26,14 +26,15 @@
             <x-input-error class="mt-2" :messages="$errors->get('ga4_api_secret')" />
         </div>
         <div>
-            @if( $keys->ga4_api_secret && isset($keys->ga4_api_secret))
+            @if(!is_null($keys->ga4_api_secret) && !empty($keys->enabled_events))
             <x-input-label for="GA4 API Secret" :value="__('Enabled Events')" />
             <ul class="list-inline">
-                @foreach($keys->enabled_events as $events)
-                <li class="list-inline-item badge badge-success">{{$events}}</li>
+                @foreach($keys->enabled_events as $event)
+                <li class="list-inline-item badge badge-success">{{ $event }}</li>
                 @endforeach
             </ul>
             @endif
+
         </div>
     </form>
 
