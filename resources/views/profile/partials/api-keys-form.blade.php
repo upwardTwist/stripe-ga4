@@ -26,7 +26,7 @@
             <x-input-error class="mt-2" :messages="$errors->get('ga4_api_secret')" />
         </div>
         <div>
-            @if(isset($keys->ga4_api_secret))
+            @if( $keys->ga4_api_secret && isset($keys->ga4_api_secret))
             <x-input-label for="GA4 API Secret" :value="__('Enabled Events')" />
             <ul class="list-inline">
                 @foreach($keys->enabled_events as $events)
