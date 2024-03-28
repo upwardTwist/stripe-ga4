@@ -1,62 +1,40 @@
 <section>
     <header>
         <h2 class="text-lg font-medium text-gray-900 dark:text-gray-100">
-            {{ __('Api keys information') }}
+            {{ __('Your Api keys and callback-url information') }}
         </h2>
     </header>
-
     <form id="send-verification" method="post" action="{{ route('verification.send') }}">
         @csrf
     </form>
-
-    @if(auth()->user()->hasActivePlan())
     <div>
-        <x-input-label for="Your Call back url" :value="__('Use this as your callback url in stripe, to recieve your events.')" />
-        <x-text-input disabled id="GA4 Measurement Protocol Api Secret" name="ga4_measurement_protocol" type="text" class="mt-1 block w-full" :value="old('name', $callback_url)" required autofocus autocomplete="name" />
+        <x-input-label for="Your Call back url" :value="__('Your Webhook-callback url.')" />
+        <x-text-input disabled id="GA4 Measurement Protocol Api Secret" name="ga4_measurement_protocol" type="text" class="mt-1 block w-full" :value="old('name', $keys->webhook_url ??'')" required autofocus autocomplete="name" />
     </div>
 
     <form method="post" action="{{ route('keys.update') }}" class="mt-6 space-y-6">
         @csrf
         @method('patch')
-
-        <p class="mt-1 text-lg text-white-600 dark:text-gray-400">
-            {{ __("You need to provide this additional information in order to connect your Stripe with your GA4") }}
-        </p>
-        <div>
-            <x-input-label for="Stripe Webhook Secret" :value="__('Stripe Webhook Secret')" />
-            <x-text-input id="Stripe Webhook Secret" name="stripe_webhook_secret" type="text" class="mt-1 block w-full" :value="old('name', $keys->stripe_webhook_secret ?? '')"  autofocus autocomplete="name" />
-            <x-input-error class="mt-2" :messages="$errors->get('stripe_webhook_secret')" />
-        </div>
         <div>
             <x-input-label for="GA4 measurement ID" :value="__('GA4 measurement ID')" />
-            <x-text-input id="GA4 measurement ID" name="ga4_measurement_id" type="text" class="mt-1 block w-full" :value="old('name', $keys->ga4_measurement_id ?? '')" required autofocus autocomplete="name" />
+            <x-text-input disabled id="GA4 measurement ID" name="ga4_measurement_id" type="text" class="mt-1 block w-full" :value="old('name', $keys->ga4_measurement_id ?? '')" required autofocus autocomplete="name" />
             <x-input-error class="mt-2" :messages="$errors->get('ga4_measurement_id')" />
         </div>
         <div>
             <x-input-label for="GA4 API Secret" :value="__('GA4 API Secret')" />
-            <x-text-input id="GA4 API Secret" name="ga4_api_secret" type="text" class="mt-1 block w-full" :value="old('name', $keys->ga4_api_secret ?? '')" required autofocus autocomplete="name" />
+            <x-text-input disabled id="GA4 API Secret" name="ga4_api_secret" type="text" class="mt-1 block w-full" :value="old('name', $keys->ga4_api_secret ?? '')" required autofocus autocomplete="name" />
             <x-input-error class="mt-2" :messages="$errors->get('ga4_api_secret')" />
         </div>
-        <!-- <div>
-            <x-input-label for="GA4 Measurement Protocol Api Secret" :value="__('GA4 Measurement Protocol Api Secret')" />
-            <x-text-input id="GA4 Measurement Protocol Api Secret" name="ga4_measurement_protocol" type="text" class="mt-1 block w-full" :value="old('name', $keys->ga4_measurement_protocol ?? '')" required autofocus autocomplete="name" />
-            <x-input-error class="mt-2" :messages="$errors->get('ga4_measurement_protocol')" />
-        </div> -->
-
-        <div class="flex items-center gap-4">
-            <x-primary-button>{{ __('Save') }}</x-primary-button>
-
-            @if (session('status') === 'profile-updated')
-            <p x-data="{ show: true }" x-show="show" x-transition x-init="setTimeout(() => show = false, 2000)" class="text-sm text-gray-600 dark:text-gray-400">{{ __('Saved.') }}</p>
+        <div>
+            @if(isset($keys->ga4_api_secret))
+            <x-input-label for="GA4 API Secret" :value="__('Enabled Events')" />
+            <ul class="list-inline">
+                @foreach($keys->enabled_events as $events)
+                <li class="list-inline-item badge badge-success">{{$events}}</li>
+                @endforeach
+            </ul>
             @endif
         </div>
-
     </form>
 
-    @else
-    <div class="text-white">
-        <h3>Please buy and active plan!</h3>
-        <p>This is the content only available for users with an active plan.</p>
-    </div>
-    @endif
 </section>

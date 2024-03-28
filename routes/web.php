@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\GoogleAnalyticsController;
+use App\Http\Controllers\HubspotWebhookController;
 use App\Http\Controllers\PlansController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\StripeController;
@@ -34,8 +35,13 @@ Route::get('/oauth2/authorize', function (Request $request) {
 
 Route::get('/payment', 'StripeController@stripe')->name('payment.form');
 
-Route::post('/stripe/webhook', [StripeWebhookController::class, 'handleInvoicePaymentSucceeded']);
+Route::post('/stripe/webhook', [StripeWebhookController::class, 'handleInvoicePaymentSucceeded'])->name('stripe.webhook');
+Route::post('/hubspot/webhook', [HubspotWebhookController::class, 'handleEvents']);
 // Route::post('/webhook/stripe', 'StripeWebhookController@handleWebhook')->name('stripe.webhook')->withoutMiddleware([\App\Http\Middleware\VerifyCsrfToken::class]);
+
+
+Route::get('/stripe/connect', [StripeController::class, 'redirectToStripe']);
+Route::get('/stripe/callback', [StripeController::class, 'handleCallback'])->name('stripe.callback');
 
 Route::middleware('auth')->group(function () {
     Route::get('/dashboard', [PlansController::class, 'index'])->name('dashboard');
@@ -51,6 +57,8 @@ Route::middleware('auth')->group(function () {
 
     Route::get('/google/login', [GoogleAnalyticsController::class, 'redirectToGoogleProvider']);
     Route::get('/google/callback', [GoogleAnalyticsController::class, 'handleProviderGoogleCallback']);
+
+    Route::post('/submit/google/account', [GoogleAnalyticsController::class, 'createProperty'])->name('property.create');
 });
 
 require __DIR__ . '/auth.php';

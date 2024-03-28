@@ -45,9 +45,13 @@ class User extends Authenticatable
     ];
     public function keys()
     {
-        return $this->belongsTo(UserApiKey::class);
+        return $this->hasMany(UserApiKey::class);
     }
 
+    public function g4Connections()
+    {
+        return $this->hasMany(Ga4Connect::class);
+    }
     public function purchases()
     {
         return $this->hasMany(Purchase::class);
@@ -55,5 +59,19 @@ class User extends Authenticatable
     public function hasActivePlan()
     {
         return $this->purchases()->where('expiry_date', '>', Carbon::now())->exists();
+    }
+
+    public function hasEnabledWebhookUrl()
+    {
+        return $this->keys()->where('webhook_status', true)->exists();
+    }
+
+    public function hasEnabledG4Keys()
+    {
+        return $this->keys()->where('ga4_measurement_id', '!=', null)->Where('ga4_api_secret', '!=', null)->exists();
+    }
+    public function hasGoogleAccessToken()
+    {
+        return $this->g4Connections()->where('access_token', '!=', null)->exists();
     }
 }

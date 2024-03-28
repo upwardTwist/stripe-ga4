@@ -11,4 +11,9 @@ class Ga4Connect extends Model
 
     protected $fillable = ['user_id', 'access_token', 'refresh_token', 'scope', 'expires_in'];
 
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }
